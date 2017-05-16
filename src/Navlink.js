@@ -14,6 +14,7 @@ class Navlink extends React.Component {
                         <li><Link to="/"><span>Home</span></Link></li>
                         <li><NavLink activeClassName={'scroll'} to='/about'>About</NavLink></li>
                         <li><NavLink activeClassName={'scroll'} to='/bookApt'>Book Appointment</NavLink></li>
+                        <li><NavLink activeClassName={'scroll'} to='/patients'>Doctors Login</NavLink></li>
                         <li><NavLink activeClassName={'scroll'} to='/contact'>Contact</NavLink></li>
                     </ul>
                     <div className="clearfix"> </div>

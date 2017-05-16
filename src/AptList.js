@@ -16,6 +16,7 @@ class AptList extends Component{
     }
 
     render() {
+      console.log('lists')
         return(
             <li className="pet-item media">
                 <div className="media-left">

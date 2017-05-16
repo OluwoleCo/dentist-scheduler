@@ -36,6 +36,7 @@ class Header extends Component {
     }
   render() {
     let user = this.props.user;
+    let using = this.props.using;
 
     const Login = () => {return <div className="navbar-right"><button  onClick={this.handleLogin}  className="btn btn-default navbar-btn">Login</button></div>};
       const Logout = () => {
@@ -44,7 +45,8 @@ class Header extends Component {
           };
           return (
               <ul className="nav navbar-nav navbar-right">
-                  <li><a href="#">Hi {user.displayName}</a></li>
+                {using ? <li><a href="#">Hi Doctor {user.displayName}</a></li> : <li><a href="#">Hi {user.displayName}</a></li> }
+                  {/* <li><a href="#">Hi {user.displayName}</a></li> */}
                   <li><a href="#"><img src={user.photoURL} className="img-circle" style={inlineStyle}></img></a></li>
                   <li><button onClick={this.handleLogout} className="btn btn-default navbar-btn">Logout</button></li>
               </ul>

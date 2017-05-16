@@ -16,7 +16,7 @@ class Login extends React.Component {
         return (
             <div className="container">
                 <div className="jumbotron">
-                    <p className="lead text-center alert alert-warning">Please Signin to book a Dentist</p>
+                    <p className="lead text-center alert alert-warning">Hello Doctor, Please Sign In</p>
                     <p className="text-center"><button type="button" className="btn btn-lg btn-success" onClick={this.handleLogin}>Log In</button></p>
                 </div>
             </div>

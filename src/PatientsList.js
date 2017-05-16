@@ -1,14 +1,14 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import AptList from './AptList';
-import AddAppointment from './AddAppointment'
+// import AddAppointment from './AddAppointment'
 import SearchAppointments from './SearchAppointments';
 import axios from 'axios';
+import Header from './Header'
 
 require('bootstrap/dist/css/bootstrap.css');
 
-class MainInterface extends React.Component {
+class PatientsList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -112,11 +112,11 @@ class MainInterface extends React.Component {
             console.log(filteredApts)
         return (
             <div className="interface">
-                <AddAppointment
+                {/* <AddAppointment
                     bodyVisible={ this.state.aptBodyVisible }
                     handleToggle={ this.toggleAddDisplay }
                     addApt={ this.addItem }
-                />
+                /> */}
                 <SearchAppointments orderBy={ this.state.orderBy }
                                     orderDir={ this.state.orderDir }
                                     onSearch={ this.onSearch }
@@ -125,6 +125,6 @@ class MainInterface extends React.Component {
             </div>
         ) //return
     } //render
-} //MainInterface
+} //PatientsList
 
-export default MainInterface; //render
+export default PatientsList; //render

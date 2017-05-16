@@ -4,7 +4,8 @@ import Banner from './Banner';
 import ABout from './About';
 import Contact from './Contact';
 import BookApt from './BookApt';
-import {HashRouter, Route, Switch, NavLink} from 'react-router-dom';
+import MainDoctor from './MainDoctor'
+import {HashRouter, Route, Switch} from 'react-router-dom';
 
 
 class Access extends React.Component {
@@ -18,6 +19,7 @@ class Access extends React.Component {
                                 <Route path="/about" component={ABout} />
                                 <Route path="/bookapt" component={BookApt} />
                                 <Route path="/contact" component={Contact} />
+                                <Route path="/patients" component={MainDoctor} />
                             </Switch>
                         </HashRouter>
 
@@ -30,4 +32,3 @@ ReactDOM.render(
     <Access />,
     document.getElementById('root')
 );
-

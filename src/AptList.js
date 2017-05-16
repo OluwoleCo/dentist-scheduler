@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../public/style.css'
 
 class AptList extends Component{
     constructor() {
@@ -17,7 +18,9 @@ class AptList extends Component{
 
     render() {
       console.log('lists')
+
         return(
+          <div style={{marginBottom: 20}} className="container">
             <li className="pet-item media">
                 <div className="media-left">
                     <button className="pet-delete btn btn-xs btn-danger" onClick={this.handleDelete}>
@@ -36,6 +39,7 @@ class AptList extends Component{
                         {this.props.singleItem.aptNotes}</div>
                 </div>
             </li>
+            </div>
         ) // return
     } // render
 } //AptList

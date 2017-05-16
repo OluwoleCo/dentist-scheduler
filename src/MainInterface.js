@@ -93,6 +93,7 @@ class MainInterface extends React.Component {
         }
 
         appArr.map((item, index) => {
+          console.log(item)
             if (item.name.toLowerCase().includes(queryText) ||
                 item.email.toLowerCase().includes(queryText) ||
                 item.phoneNumber.includes(queryText)
@@ -117,10 +118,10 @@ class MainInterface extends React.Component {
                     handleToggle={ this.toggleAddDisplay }
                     addApt={ this.addItem }
                 />
-                <SearchAppointments orderBy={ this.state.orderBy }
+                {/* <SearchAppointments orderBy={ this.state.orderBy }
                                     orderDir={ this.state.orderDir }
                                     onSearch={ this.onSearch }
-                                    onReOrder={ this.onReOrder } />
+                                    onReOrder={ this.onReOrder } /> */}
                 <ul className="item-list media-list">{filteredApts}</ul>
             </div>
         ) //return
